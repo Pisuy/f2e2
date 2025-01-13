@@ -12,6 +12,10 @@
     max-width: 1200px;
 }
 
+.h-container-s {
+    max-width: 1000px;
+}
+
 .h-mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -364,7 +368,18 @@ img {
     margin-bottom: 4rem;
 }
 
-/* card ----------------- */
+/* section-result ------------- */
+
+.section-result .section-head {
+    text-align: center;
+}
+
+.section-result .section-body {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* card ----------------------- */
 
 .section-subject .section-subtitle {
     text-align: center;
@@ -412,4 +427,24 @@ img {
 .card-description {
     color: rgba(0, 0, 0, .7);
     line-height: 1.4;
+}
+
+
+/* result ----------- */
+
+.result {
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+.section-result .result-number {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.section-result .result-foot {
+    color: rgba(0, 0, 0, .4);
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
