@@ -4,16 +4,18 @@
 :root {
     --primary-color: #24b4d7;
     --alpha-40: rgba(255, 255, 255, 0.4);
+    --width-m: 1200px;
+    --width-s: 1000px
 }
 
 /* helper ------------------- */
 
 .h-container-m {
-    max-width: 1200px;
+    max-width: var(--width-m);
 }
 
 .h-container-s {
-    max-width: 1000px;
+    max-width: var(--width-s);
 }
 
 .h-mx-auto {
@@ -45,7 +47,15 @@
     background-size: 7px 7px;
 }
 
+.h-text-center {
+    text-align: center;
+}
+
 /* reset -------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Noto Sans TC", serif;
@@ -422,6 +432,9 @@ img {
 .card-title {
     font-size: 1.2rem;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-description {
@@ -448,3 +461,118 @@ img {
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+
+/* table -------------- */
+
+.table {
+    background-color: #fff;
+    width: 100%;
+}
+
+.tablewarp {
+    overflow: auto;
+}
+
+.table thead {
+    background: rgba(0, 0, 0, .1);
+}
+
+.table th,
+.table td {
+    padding: .7rem 1rem;
+    line-height: 1.5em;
+    /* text-align: center; */
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.table td {
+    font-size: 1.1rem;
+}
+
+.table-border th,
+.table-border td {
+    border: solid 1px rgba(0, 0, 0, .2);
+}
+
+.table-stripe tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.table-hover tbody tr {
+    transition-duration: .3s;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #c5f3ff;
+}
+
+.table-nowarp th,
+.table-nowarp td {
+    white-space: nowrap;
+}
+
+/* footer ---------------- */
+
+.footer {
+    background-color: #333;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.aside {
+    position: fixed;
+    bottom: 300px;
+    margin-left: calc(var(--width-m) + 30px);
+}
+
+.social {
+    display: block;
+    padding: .8rem .5rem;
+    color: #fff;
+}
+
+.social-ig {
+    background-image: linear-gradient(45deg, yellow, red, #b523b0);
+}
+
+.social-fb {
+    background-color: #0864f7;
+}
+
+.social-x {
+    background-color: #000;
+}
+
+.social-up {
+    color: rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+/* media ---------------- */
+
+@media screen and (max-width:768px) {
+    .header-body{
+        display: none;
+    }
+
+    .header-foot{
+        display: block;
+    }
+}
+
